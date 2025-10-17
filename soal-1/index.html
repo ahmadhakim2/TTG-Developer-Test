@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-labelledby="formTitle">
+        <h1 id="formTitle" class="title">Pendaftaran Pengguna</h1>
+        <form id="registerForm" novalidate>
+          <div class="form-group">
+            <label for="fullName">Nama lengkap</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Nama lengkap"
+              autocomplete="name"
+              required
+            />
+            <small
+              class="error-message"
+              id="fullNameError"
+              aria-live="polite"
+            ></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nama@contoh.com"
+              autocomplete="email"
+              required
+            />
+            <small
+              class="error-message"
+              id="emailError"
+              aria-live="polite"
+            ></small>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Minimal 8 karakter"
+              autocomplete="new-password"
+              required
+              minlength="8"
+            />
+            <small
+              class="error-message"
+              id="passwordError"
+              aria-live="polite"
+            ></small>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Konfirmasi password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Ulangi password"
+              autocomplete="new-password"
+              required
+            />
+            <small
+              class="error-message"
+              id="confirmPasswordError"
+              aria-live="polite"
+            ></small>
+          </div>
+
+          <button type="submit" class="btn">Daftar</button>
+        </form>
+
+        <p
+          class="success-message"
+          id="successMessage"
+          role="status"
+          aria-live="polite"
+          hidden
+        >
+          Pendaftaran Berhasil
+        </p>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
